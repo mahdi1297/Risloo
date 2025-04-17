@@ -1,16 +1,25 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import localFont from 'next/font/local';
+import "@/styles/globals.css";
+import "@/styles/grid.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const vazir = localFont({
+  src: [
+    {
+      path: './../../public/fonts/Sahel.woff',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './../../public/fonts/Sahel-Bold.woff',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-vazir',
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,8 +32,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="fa" dir="rtl" className={`${vazir.variable} font-sans`}>
+      <body>
         {children}
       </body>
     </html>

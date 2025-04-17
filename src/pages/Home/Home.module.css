@@ -1,0 +1,19 @@
+.homeViewWrapper{
+    width: 80%;
+    margin: auto;
+    margin-top: 116px;
+    
+    display: flex;
+    align-items: start;
+}
+
+
+.listColumn{
+    width: 40%;
+}
+
+.resultColumn{
+    width: 60%;
+    height: 100%;
+    flex: 1;
+}

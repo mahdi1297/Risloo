@@ -1,0 +1,26 @@
+
+
+import React, { FC } from 'react'
+import styles from './InfinitListItem.module.css'
+import { InfinitListItemProps } from './InfinitListItem.types'
+import { CardTitle } from '@/UI/atoms/CardTitle/CardTitle'
+import { ManagerField } from '@/UI/atoms/ManagerFIeld/ManagerFIeld'
+import { CardAddress } from '@/UI/atoms/CardAddress'
+
+const InfinitListItem: FC<InfinitListItemProps> = ({ item }) => {
+  return (
+    <div className={styles.box}>
+      <div>
+        <div className={styles.title}>
+          <CardTitle title={item.detail.title} />
+        </div>
+        <div className={styles.address}>
+          <CardAddress address={item.detail.address || ""} />
+        </div>
+      </div>
+      <ManagerField manager={item.manager} />
+    </div>
+  )
+}
+
+export default InfinitListItem

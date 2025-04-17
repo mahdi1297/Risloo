@@ -1,0 +1,1 @@
+export const ERROR_FA_FAILED_TO_GET_DATA = 'مشکل در دریافت اطلاعات'

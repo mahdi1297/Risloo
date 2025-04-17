@@ -1,0 +1,34 @@
+.centerItem {
+    position: sticky;
+    top: 40px;
+    height: calc(100vh - 60px);
+    margin-right: 16px;
+    border-radius: 16px;
+    background-color: #fff;
+
+    box-shadow:
+        var(--infinit-list-item-offset-shadow, 0 0 #0000),
+        var(--infinit-list-item-ring-shadow, 0 0 #0000),
+        var(--infinit-list-item-shadow);
+
+    padding: var(--space-md);
+}
+
+.title {
+    margin-top: var(--space-xlg);
+    margin-bottom: var(--space-lg);
+}
+
+.addressTitle {
+    margin-top: var(--space-xxlg);
+    margin-bottom: var(--space-sm);
+    font-size: var(--space-xmd);
+    color: #000;
+    border-bottom: 2px solid #000;
+    width: max-content;
+}
+
+.address {
+    margin-top: var(--space-xlg);
+    margin-bottom: var(--space-lg);
+}

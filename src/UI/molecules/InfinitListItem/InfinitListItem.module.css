@@ -1,0 +1,38 @@
+.box {
+    width: 100%;
+    height: 168px;
+    box-shadow:
+        var(--infinit-list-item-offset-shadow, 0 0 #0000),
+        var(--infinit-list-item-ring-shadow, 0 0 #0000),
+        var(--infinit-list-item-shadow);
+
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-sizing:border-box;
+
+    padding: var(--space-md);
+
+    transition: all ease 0.2s;
+
+    cursor: pointer;
+}
+
+
+.box.active{
+    border-bottom:4px solid  var(--success);
+}
+
+.box:hover{
+    max-width: 100%;
+    box-sizing:border-box;
+    border-bottom:4px solid  var(--success);
+    transition: all ease 0.2s;
+}
+
+.title{
+    margin-bottom: var(--space-sm);
+}
+
+.address{
+    margin-bottom: var(--space-xlg);
+}

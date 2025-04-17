@@ -1,0 +1,25 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xsm);
+}
+
+.box{
+    display: flex;
+    gap: 6px;
+
+
+    a, p{
+        font-size: var(--space-xmd);
+    }
+    
+    p{
+        color: var(--text-secondary);
+    }
+    
+    
+    a{
+        color: #4d6bfe;
+    }
+
+}

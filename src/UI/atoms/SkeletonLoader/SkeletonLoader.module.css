@@ -1,0 +1,74 @@
+/* SkeletonLoader.module.css */
+
+.skeletonContainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.skeletonSlider {
+    width: 100%;
+    height: 190px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 12px;
+    overflow: hidden;
+}
+
+.skeletonSlide {
+    min-width: calc(25% - 9px);
+    /* 4 items with 12px gap */
+    height: 100%;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    border-radius: 5px;
+    animation: shimmer 1.5s infinite;
+}
+
+.skeletonTitle {
+    width: 60%;
+    height: 28px;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    border-radius: 4px;
+    animation: shimmer 1.5s infinite;
+    margin-top: 15px;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .skeletonSlide {
+        min-width: calc(33.333% - 8px);
+        /* 3 items per view */
+    }
+}
+
+@media (max-width: 768px) {
+    .skeletonSlide {
+        min-width: calc(50% - 6px);
+        /* 2 items per view */
+    }
+}
+
+@media (max-width: 480px) {
+    .skeletonSlide {
+        min-width: 100%;
+        /* 1 item per view */
+    }
+
+    .skeletonTitle {
+        width: 80%;
+        height: 24px;
+    }
+}

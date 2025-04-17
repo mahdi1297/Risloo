@@ -1,0 +1,43 @@
+.imageSlider {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.imageSliderList {
+    gap: 12px;
+}
+
+/* For WebKit browsers */
+.imageSlider::-webkit-scrollbar {
+    width: 14px!important;
+    height: 4px;
+}
+
+.imageSlider::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 8px;
+}
+
+.imageSlider::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 8px;
+}
+
+.imageSlider::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-light);
+}
+
+
+.imageSlidItem {
+    width: 200px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--gray-light);
+    border-radius: 5px;
+
+}
+
+.imageSlidItem img {}
