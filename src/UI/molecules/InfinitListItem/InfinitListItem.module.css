@@ -13,12 +13,11 @@
     padding: var(--space-md);
 
     transition: all ease 0.2s;
-
     cursor: pointer;
 }
 
 
-.box.active{
+.activeBox{
     border-bottom:4px solid  var(--success);
 }
 

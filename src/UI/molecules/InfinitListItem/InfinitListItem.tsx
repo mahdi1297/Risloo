@@ -7,9 +7,9 @@ import { CardTitle } from '@/UI/atoms/CardTitle/CardTitle'
 import { ManagerField } from '@/UI/atoms/ManagerFIeld/ManagerFIeld'
 import { CardAddress } from '@/UI/atoms/CardAddress'
 
-const InfinitListItem: FC<InfinitListItemProps> = ({ item }) => {
+const InfinitListItem: FC<InfinitListItemProps> = ({ item, isActive }) => {
   return (
-    <div className={styles.box}>
+    <div className={`${styles.box} ${isActive ? styles.activeBox : ''}`}>
       <div>
         <div className={styles.title}>
           <CardTitle title={item.detail.title} />

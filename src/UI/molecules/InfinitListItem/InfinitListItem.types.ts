@@ -1,5 +1,6 @@
 import { CounselingCenter } from "@/types/CounselingCenter";
 
 export interface InfinitListItemProps {
-    item: CounselingCenter
+    item: CounselingCenter,
+    isActive: boolean
 }
