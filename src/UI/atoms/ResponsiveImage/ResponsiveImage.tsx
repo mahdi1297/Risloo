@@ -7,7 +7,7 @@ export const ResponsiveImage = ({ src, alt }: { src: string; alt: string }) => (
             alt={alt}
             fill
             style={{
-                objectFit: 'contain' // or 'cover' based on your needs
+                objectFit: 'contain' 
             }}
             sizes="(max-width: 768px) 100vw, 50vw"
         />

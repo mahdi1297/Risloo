@@ -35,3 +35,11 @@
 .address{
     margin-bottom: var(--space-xlg);
 }
+
+
+@media (max-width: 805px){
+    .box{
+        min-height: 168px;
+        height: auto;
+    }
+}

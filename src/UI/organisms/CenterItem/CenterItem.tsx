@@ -6,13 +6,13 @@ import { CardTitle } from '@/UI/atoms/CardTitle'
 import { CardAddress } from '@/UI/atoms/CardAddress'
 import { CenterContact } from '@/UI/atoms/CenterContact'
 import { SkeletonLoader } from '@/UI/atoms/SkeletonLoader'
+import { RenderIf } from '@/UI/atoms/RenderIf'
 
 export const CenterItem: FC<CenterItemProps> = ({ data }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setIsLoading(true)
-
 
     setTimeout(() => {
       setIsLoading(false)
@@ -22,6 +22,7 @@ export const CenterItem: FC<CenterItemProps> = ({ data }) => {
 
   const images = data?.detail?.avatar?.map((item) => item.url);
 
+
   if (isLoading) {
     return <div className={styles.centerItem}>
       <SkeletonLoader />
@@ -30,29 +31,33 @@ export const CenterItem: FC<CenterItemProps> = ({ data }) => {
 
   return (
     <div className={styles.centerItem}>
-      <div className={styles.title}>
-        <CardTitle title={data?.manager?.name || ""} />
-      </div>
-      <div className='flex align-center'>
-        {images ?
-          <ImageSlider
-            images={images}
-            showDots={true}
+      <RenderIf condition={!data?.id ? true : false}>
+        <p>لطفا یک مورد را انتخاب کنید</p>
+      </RenderIf>
+      <RenderIf condition={data?.id ? true : false}>
+        <div className={styles.title}>
+          <CardTitle title={data?.manager?.name || ""} />
+        </div>
+        
+          {images ?
+            <ImageSlider
+              images={images}
+              showDots={true}
+            />
+            : null}
+        <br />
+        <div className={styles.address}>
+          <p className={styles.addressTitle}>آدرس</p>
+          <CardAddress address={data?.detail?.address || ""} />
+        </div>
+        <div>
+          <CenterContact
+            phone={data?.detail?.phone_numbers?.[0] || ""}
+            website={data?.detail?.phone_numbers?.[1] || ""}
+            instagram={data?.detail?.phone_numbers?.[2] || ""}
           />
-          : null}
-      </div>
-      <br />
-      <div className={styles.address}>
-        <p className={styles.addressTitle}>آدرس</p>
-        <CardAddress address={data?.detail?.address || ""} />
-      </div>
-      <div>
-        <CenterContact
-          phone={data?.detail?.phone_numbers?.[0] || ""}
-          website={data?.detail?.phone_numbers?.[1] || ""}
-          instagram={data?.detail?.phone_numbers?.[2] || ""}
-        />
-      </div>
+        </div>
+      </RenderIf>
     </div>
   )
 }

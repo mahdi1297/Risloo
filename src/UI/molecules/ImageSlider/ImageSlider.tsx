@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styles from './ImageSlider.module.css';
-import Image from 'next/image';
 import { ResponsiveImage } from '@/UI/atoms/ResponsiveImage';
 
 interface ImageSliderProps {
@@ -19,9 +18,11 @@ export const ImageSlider: React.FC<ImageSliderProps> = ({ images, showDots = tru
         </div>
     }
 
-    return <div className={`${styles.imageSlider} flex`}>
-        <div className={`${styles.imageSliderList} flex`}>
-            {images.map(renderItem)}
+    return <div className='flex align-center'>
+        <div className={`${styles.imageSlider} flex`}>
+            <div className={`${styles.imageSliderList} flex align-center`}>
+                {images.map(renderItem)}
+            </div>
         </div>
     </div>
 };
