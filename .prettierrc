@@ -1,0 +1,23 @@
+{
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "printWidth": 100,
+  "arrowParens": "avoid",
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "importOrder": [
+    "^react(.*)$",
+    "^next(.*)$",
+    "^@/redux(.*)$",
+    "^@/pages(.*)$",
+    "^@/UI/organisms(.*)$",
+    "^@/UI/molecules(.*)$",
+    "^@/UI/atoms(.*)$",
+    "^@/utils(.*)$",
+    "^@/constants(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}

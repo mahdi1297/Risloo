@@ -1,6 +1,6 @@
-import { CounselingCenter } from "@/types/CounselingCenter";
+import { CounselingCenter } from '@/types/CounselingCenter'
 
 export interface InfinitListItemProps {
-    item: CounselingCenter,
-    isActive: boolean
+  item: CounselingCenter
+  isActive: boolean
 }

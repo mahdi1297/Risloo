@@ -1,11 +1,11 @@
-
-
 import React, { FC } from 'react'
-import styles from './InfinitListItem.module.css'
-import { InfinitListItemProps } from './InfinitListItem.types'
+
+import { CardAddress } from '@/UI/atoms/CardAddress'
 import { CardTitle } from '@/UI/atoms/CardTitle/CardTitle'
 import { ManagerField } from '@/UI/atoms/ManagerFIeld/ManagerFIeld'
-import { CardAddress } from '@/UI/atoms/CardAddress'
+
+import styles from './InfinitListItem.module.css'
+import { InfinitListItemProps } from './InfinitListItem.types'
 
 const InfinitListItem: FC<InfinitListItemProps> = ({ item, isActive }) => {
   return (
@@ -15,7 +15,7 @@ const InfinitListItem: FC<InfinitListItemProps> = ({ item, isActive }) => {
           <CardTitle title={item.detail.title} />
         </div>
         <div className={styles.address}>
-          <CardAddress address={item.detail.address || ""} />
+          <CardAddress address={item.detail.address || ''} />
         </div>
       </div>
       <ManagerField manager={item.manager} />

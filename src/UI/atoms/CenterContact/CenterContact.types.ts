@@ -1,5 +1,5 @@
 export interface CenterContactProps {
-    phone: string;
-    website: string;
-    instagram: string
+  phone: string
+  website: string
+  instagram: string
 }

@@ -3,8 +3,8 @@
   --foreground: #f4f4f4;
   --infinit-list-item-offset-shadow: 0 0 #0000;
   --infinit-list-item-ring-shadow: 0 0 #0000;
-  --infinit-list-item-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .15);
-  --infinit-list-item-border-radius: .5rem;
+  --infinit-list-item-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.15);
+  --infinit-list-item-border-radius: 0.5rem;
   --header-height: 100px;
   --header-padding: 12px;
   --page-bottom-padding: 12px;
@@ -18,13 +18,12 @@
   --space-xlg: 22px;
   --space-xxlg: 26px;
 
-
   --text-primary: #000000;
   --text-secondary: #404b5b;
 
   --dark: #000;
   --info: #104072;
-  --gray-light:#f4f4f4;
+  --gray-light: #f4f4f4;
 
   --success: #4d6bfe;
 }
@@ -35,7 +34,6 @@
     --foreground: #f4f4f4;
   }
 }
-
 
 html,
 body {
@@ -68,19 +66,15 @@ a {
   font-family: var(--font-arabic);
 }
 
-
 @media (prefers-color-scheme: dark) {
-  html {}
+  html {
+  }
 }
-
 
 ul,
 li {
   list-style: none !important;
 }
-
-
-
 
 #wrapper {
   display: flex;
@@ -108,6 +102,3 @@ li {
   height: 3000px;
   background: linear-gradient(white, #ddd);
 }
-
-
-

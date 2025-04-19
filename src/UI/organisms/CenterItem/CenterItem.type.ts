@@ -1,5 +1,5 @@
-import { CounselingCenter } from "@/types/CounselingCenter";
+import { CounselingCenter } from '@/types/CounselingCenter'
 
-export interface CenterItemProps{
-    data: CounselingCenter | null
+export interface CenterItemProps {
+  data: CounselingCenter | null
 }

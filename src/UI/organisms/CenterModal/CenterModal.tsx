@@ -1,23 +1,25 @@
 import React, { FC, useEffect, useState } from 'react'
+
 import { Modal } from '@/UI/molecules/Modal'
-import { CenterItem } from '../CenterItem';
-import { CenterModalProps } from './CenterModal.types';
+
+import { CenterItem } from '../CenterItem'
+import { CenterModalProps } from './CenterModal.types'
 
 export const CenterModal: FC<CenterModalProps> = ({ data, clearActiveItem }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   useEffect(() => {
     if (data?.id) {
       setIsModalOpen(true)
-      return;
+      return
     }
 
     setIsModalOpen(false)
   }, [data?.id])
 
   const closeModal = () => {
-    clearActiveItem();
-    setIsModalOpen(false);
+    clearActiveItem()
+    setIsModalOpen(false)
   }
 
   return (

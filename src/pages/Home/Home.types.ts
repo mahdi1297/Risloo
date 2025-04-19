@@ -1,5 +1,5 @@
-import { CounselingCenter } from "@/types/CounselingCenter";
+import { CounselingCenter } from '@/types/CounselingCenter'
 
 export interface HomePageProps {
-    data: CounselingCenter[]
+  data: CounselingCenter[]
 }

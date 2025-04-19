@@ -1,5 +1,5 @@
-import { Manager } from "@/types/Manager";
+import { Manager } from '@/types/Manager'
 
 export interface ManagerFIeldProps {
-    manager: Manager,
+  manager: Manager
 }

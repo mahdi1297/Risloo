@@ -1,6 +1,6 @@
 export interface CardAddressProps {
-    /**
-    * The address to display
-    */
-    address: string
+  /**
+   * The address to display
+   */
+  address: string
 }

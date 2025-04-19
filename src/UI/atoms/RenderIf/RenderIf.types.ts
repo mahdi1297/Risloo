@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react'
 
-export interface RenderIfTProps{
-    condition: boolean,
-    children: ReactNode
+export interface RenderIfTProps {
+  condition: boolean
+  children: ReactNode
 }

@@ -1,41 +1,39 @@
 .homeViewWrapper {
-    width: calc(100% - 24px);
-    margin: auto;
-    margin-top: 116px;
-    display: flex;
-    align-items: start;
+  width: calc(100% - 24px);
+  margin: auto;
+  margin-top: 116px;
+  display: flex;
+  align-items: start;
 }
 
-
 .listColumn {
-    width: 40%;
+  width: 40%;
 }
 
 .resultColumn {
-    width: 60%;
-    height: 100%;
-    flex: 1;
+  width: 60%;
+  height: 100%;
+  flex: 1;
 }
 
 @media (min-width: 1200px) {
-    .homeViewWrapper {
-        width: 80%;
-    }
+  .homeViewWrapper {
+    width: 80%;
+  }
 }
 
 @media (max-width: 960px) {
-
-    .listColumn,
-    .resultColumn {
-        width: 50%;
-    }
+  .listColumn,
+  .resultColumn {
+    width: 50%;
+  }
 }
 
 @media (max-width: 805px) {
-    .listColumn{
-        width: 100%;
-    }
-    .resultColumn {
-        display: none;
-    }
+  .listColumn {
+    width: 100%;
+  }
+  .resultColumn {
+    display: none;
+  }
 }

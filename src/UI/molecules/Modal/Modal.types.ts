@@ -1,8 +1,8 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react'
 
 export interface ModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  children: ReactNode;
-  ariaLabel?: string;
+  isOpen: boolean
+  onClose: () => void
+  children: ReactNode
+  ariaLabel?: string
 }

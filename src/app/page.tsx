@@ -1,49 +1,57 @@
-import { limitData } from "@/utils/limitData";
-import styles from "./page.module.css";
-import { CounselingCenter } from "@/types/CounselingCenter";
-import { environments } from "@/constants/enviroments";
-import { configs } from "@/constants/configs";
-import { ERROR_FA_FAILED_TO_GET_DATA } from "@/constants/messages";
-import { logError } from "@/utils/serverLogger";
-import HomvePage from "@/pages/Home/Home";
 
-type FetchResult =
-  | { data: CounselingCenter[]; error: null }
-  | { data: null; error: { message: string } };
+import HomvePage from '@/pages/Home/Home'
+
+import { environments } from '@/constants/enviroments'
+
+import styles from './page.module.css'
+import { FetchResult } from '@/types/FetchResult'
+import { CounselingCenter } from '@/types/CounselingCenter'
+import { limitData } from '@/utils/limitData'
+import { fetchCenters } from '@/services/fetchCenters'
 
 const URL = environments.RISLOO_CENTER_URI
-
-async function fetchCenters(): Promise<FetchResult> {
-  try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}${URL}`, {
-      ...configs.SSR_REQUEST_CONFIG,
-    });
-
-    if (!res.ok) {
-      logError(JSON.stringify(res), 'Failed to fetch centers');
-      return { data: null, error: { message: ERROR_FA_FAILED_TO_GET_DATA } };
-    }
-
-    const json = await res.json();
-    const limited = limitData<CounselingCenter>(json, 10);
-
-    return { data: limited, error: null };
-  } catch (err) {
-    logError(err, 'Failed to fetch centers');
-    return { data: null, error: { message: ERROR_FA_FAILED_TO_GET_DATA } };
-  }
+export const metadata = {
+  title: environments.SITE_TITLE,
+  description: environments.SITE_DESCRIPTION,
+  keywords: environments.SITE_KEYWORDS,
+  openGraph: {
+    title: environments.OPEN_GRAPH_TITLE,
+    description: environments.OPEN_GRAPH_DESCRIPTION,
+    url: process.env.NEXT_PUBLIC_BASE_URL,
+    siteName: environments.SITE_NAME,
+    locale: environments.OPEN_GRAPH_LOCALE,
+    type: environments.OPEN_GRAPH_TYPE,
+  },
+  twitter: {
+    card: environments.TWITTER_CARD,
+    title: environments.TWITTER_TITLE,
+    description: environments.TWITTER_DESCRIPTION,
+  },
 }
 
+export async function getAndManipulateCenters(): Promise<FetchResult> {
+  const response = await fetchCenters();
+
+  if (response.error) {
+    return { data: null, error: response.error }
+  }
+
+  const limitedData = limitData<CounselingCenter>(response.data, 10)
+  return { data: limitedData, error: null }
+}
+
+
+
 export default async function Home() {
-  const { data, error } = await fetchCenters();
+  const { data, error } = await getAndManipulateCenters()
 
   if (error) {
-    return <div className="text-red-500 p-4">{error.message}</div>;
+    return <div className="text-red-500 p-4">{error.message}</div>
   }
 
   return (
     <div className={styles.page}>
       <HomvePage data={data} />
     </div>
-  );
+  )
 }

@@ -1,1 +1,1 @@
-export *  from './CenterItem'
+export * from './CenterItem'

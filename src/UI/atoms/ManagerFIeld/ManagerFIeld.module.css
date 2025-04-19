@@ -1,8 +1,8 @@
-.managerBox{
-    padding: var(--space-xsm);
-    font-size: var(--space-md);
-    gap: 12px;
-    background-color: var(--gray-light);
-    border-radius: 4px;
-    width: max-content;
+.managerBox {
+  padding: var(--space-xsm);
+  font-size: var(--space-md);
+  gap: 12px;
+  background-color: var(--gray-light);
+  border-radius: 4px;
+  width: max-content;
 }

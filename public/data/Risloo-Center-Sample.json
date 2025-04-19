@@ -97,9 +97,7 @@
           "exec": "png"
         }
       ],
-      "phone_numbers": [
-        "02532812777"
-      ]
+      "phone_numbers": ["02532812777"]
     },
     "created_at": 1609168929
   },
@@ -266,10 +264,7 @@
           "exec": "png"
         }
       ],
-      "phone_numbers": [
-        "0253124",
-        "09903671984"
-      ]
+      "phone_numbers": ["0253124", "09903671984"]
     },
     "created_at": 1623001269
   },
@@ -371,10 +366,7 @@
           "exec": "png"
         }
       ],
-      "phone_numbers": [
-        "09106954696",
-        "02166908911"
-      ]
+      "phone_numbers": ["09106954696", "02166908911"]
     },
     "created_at": 1634723138
   },
@@ -516,9 +508,7 @@
           "exec": "png"
         }
       ],
-      "phone_numbers": [
-        "09377896686"
-      ]
+      "phone_numbers": ["09377896686"]
     },
     "created_at": 1646217308
   },
@@ -741,9 +731,7 @@
           "exec": "png"
         }
       ],
-      "phone_numbers": [
-        "02537735553"
-      ]
+      "phone_numbers": ["02537735553"]
     },
     "created_at": 1668870226
   },
@@ -1353,10 +1341,7 @@
           "exec": "png"
         }
       ],
-      "phone_numbers": [
-        "https://eitaa.com/noaa_admin",
-        "https://noaa.ir/"
-      ]
+      "phone_numbers": ["https://eitaa.com/noaa_admin", "https://noaa.ir/"]
     },
     "created_at": 1687703590
   },
@@ -1782,9 +1767,7 @@
           "exec": "png"
         }
       ],
-      "phone_numbers": [
-        "09964012723"
-      ]
+      "phone_numbers": ["09964012723"]
     },
     "created_at": 1705820322
   },
@@ -1886,9 +1869,7 @@
           "exec": "png"
         }
       ],
-      "phone_numbers": [
-        "09379396985"
-      ]
+      "phone_numbers": ["09379396985"]
     },
     "created_at": 1706361279
   },
@@ -2274,9 +2255,7 @@
           "exec": "png"
         }
       ],
-      "phone_numbers": [
-        "09107708197"
-      ]
+      "phone_numbers": ["09107708197"]
     },
     "created_at": 1713937479
   },
@@ -2438,9 +2417,7 @@
           "exec": "png"
         }
       ],
-      "phone_numbers": [
-        "06142228785"
-      ]
+      "phone_numbers": ["06142228785"]
     },
     "created_at": 1718534837
   },
@@ -2500,9 +2477,7 @@
       "description": null,
       "address": "میدان آرژانتین، خیابان الوند، جنب بیمارستان کسری، کوچه آفرین، پلاک 3، ساختمان پزشکان الوند، طبقه هشتم غربی",
       "avatar": [],
-      "phone_numbers": [
-        "09900993391"
-      ]
+      "phone_numbers": ["09900993391"]
     },
     "created_at": 1722580489
   },
@@ -2624,10 +2599,7 @@
           "exec": "png"
         }
       ],
-      "phone_numbers": [
-        "09999916185",
-        "09163134107"
-      ]
+      "phone_numbers": ["09999916185", "09163134107"]
     },
     "created_at": 1729581788
   },
@@ -3055,9 +3027,7 @@
           "exec": "png"
         }
       ],
-      "phone_numbers": [
-        "09191589906"
-      ]
+      "phone_numbers": ["09191589906"]
     },
     "created_at": 1734280566
   },
@@ -3322,10 +3292,7 @@
           "exec": "png"
         }
       ],
-      "phone_numbers": [
-        "۰۲۵۳۲۴۲۷۸۷۰",
-        "۰۹۹۳۲۱۱۵۰۶۱"
-      ]
+      "phone_numbers": ["۰۲۵۳۲۴۲۷۸۷۰", "۰۹۹۳۲۱۱۵۰۶۱"]
     },
     "created_at": 1737797134
   },
@@ -4724,9 +4691,7 @@
       "description": "ارتباط از طریق ایتا و پیامک",
       "address": null,
       "avatar": [],
-      "phone_numbers": [
-        "09900993391"
-      ]
+      "phone_numbers": ["09900993391"]
     },
     "created_at": 1632859564
   },

@@ -1,5 +1,5 @@
-import path from 'path';
+import path from 'path'
 
 export function getDirectoryPath(paths: string[]) {
-    return path.join(process.cwd(), ...paths);
+  return path.join(process.cwd(), ...paths)
 }
