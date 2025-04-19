@@ -1,4 +1,3 @@
-
 import { logError } from '@/utils/serverLogger'
 
 import { configs } from '@/constants/configs'

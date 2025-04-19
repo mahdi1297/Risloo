@@ -1,12 +1,12 @@
 import { fetchCenters } from '@/services/fetchCenters'
 import { CounselingCenter } from '@/types/CounselingCenter'
+import HomeView from '@/view/Home/Home'
 
 import { limitData } from '@/utils/limitData'
 
 import { environments } from '@/constants/enviroments'
 
 import styles from './page.module.css'
-import HomeView from '@/view/Home/Home'
 
 export const metadata = {
   title: environments.SITE_TITLE,
