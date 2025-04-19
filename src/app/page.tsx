@@ -1,15 +1,13 @@
 
-import HomvePage from '@/pages/Home/Home'
 
 import { environments } from '@/constants/enviroments'
 
 import styles from './page.module.css'
-import { FetchResult } from '@/types/FetchResult'
 import { CounselingCenter } from '@/types/CounselingCenter'
 import { limitData } from '@/utils/limitData'
 import { fetchCenters } from '@/services/fetchCenters'
+import HomePage  from '@/pages/Home'
 
-const URL = environments.RISLOO_CENTER_URI
 export const metadata = {
   title: environments.SITE_TITLE,
   description: environments.SITE_DESCRIPTION,
@@ -29,7 +27,7 @@ export const metadata = {
   },
 }
 
-export async function getAndManipulateCenters(): Promise<FetchResult> {
+export async function getAndManipulateCenters() {
   const response = await fetchCenters();
 
   if (response.error) {
@@ -40,8 +38,6 @@ export async function getAndManipulateCenters(): Promise<FetchResult> {
   return { data: limitedData, error: null }
 }
 
-
-
 export default async function Home() {
   const { data, error } = await getAndManipulateCenters()
 
@@ -51,7 +47,7 @@ export default async function Home() {
 
   return (
     <div className={styles.page}>
-      <HomvePage data={data} />
+      <HomePage data={data} />
     </div>
   )
 }

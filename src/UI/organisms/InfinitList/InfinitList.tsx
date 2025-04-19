@@ -32,7 +32,7 @@ export const InfinitList: FC<InfinitListProps> = ({
         </li>
       )
     },
-    [selectCenterItem]
+    [selectCenterItem, activeItem?.id]
   )
 
   useEffect(() => {

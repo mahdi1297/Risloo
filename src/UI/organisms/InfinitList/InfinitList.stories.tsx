@@ -2,8 +2,6 @@ import { CounselingCenter } from '@/types/CounselingCenter'
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
 
-import { FA_LOADING, FA_NO_MORE_CONTENT } from '@/constants/messages'
-
 import { InfinitList } from './InfinitList'
 import './InfinitList.module.css'
 

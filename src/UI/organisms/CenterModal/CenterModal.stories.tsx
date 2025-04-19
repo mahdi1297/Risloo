@@ -1,10 +1,7 @@
 import { CounselingCenter } from '@/types/CounselingCenter'
 import { Meta, StoryObj } from '@storybook/react'
 
-import React from 'react'
-
 import { CenterModal } from './CenterModal'
-import { CenterModalProps } from './CenterModal.types'
 
 const sampleData: CounselingCenter = {
   id: 'RS966666Q',

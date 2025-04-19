@@ -1,6 +1,6 @@
 'use client'
 
-import { ReactNode, useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import ReactDOM from 'react-dom'
 
 import styles from './Modal.module.css'
@@ -52,7 +52,8 @@ export const Modal = ({ isOpen, onClose, children, ariaLabel = 'Modal dialog' }:
   useEffect(() => {
     if (!isOpen || !modalRef.current) return
 
-    const focusableElements = modalRef.current.querySelectorAll<HTMLElement>(
+    const modalElement = modalRef.current
+    const focusableElements = modalElement.querySelectorAll<HTMLElement>(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     )
 
@@ -77,9 +78,9 @@ export const Modal = ({ isOpen, onClose, children, ariaLabel = 'Modal dialog' }:
         }
       }
 
-      modalRef.current.addEventListener('keydown', handleTabKey)
+      modalElement.addEventListener('keydown', handleTabKey)
       return () => {
-        modalRef.current?.removeEventListener('keydown', handleTabKey)
+        modalElement.removeEventListener('keydown', handleTabKey)
       }
     }
   }, [isOpen])

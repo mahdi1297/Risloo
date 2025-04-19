@@ -1,7 +1,5 @@
-import { CounselingCenter } from '@/types/CounselingCenter'
 import { FetchResult } from '@/types/FetchResult'
 
-import { limitData } from '@/utils/limitData'
 import { logError } from '@/utils/serverLogger'
 
 import { configs } from '@/constants/configs'

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 
 import { ResponsiveImage } from '@/UI/atoms/ResponsiveImage'
 
@@ -9,7 +9,7 @@ interface ImageSliderProps {
   showDots?: boolean
 }
 
-export const ImageSlider: React.FC<ImageSliderProps> = ({ images, showDots = true }) => {
+export const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
   const renderItem = (image: string, index: number) => {
     return (
       <div key={index} className={styles.imageSlidItem}>

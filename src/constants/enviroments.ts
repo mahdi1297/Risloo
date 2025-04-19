@@ -1,4 +1,5 @@
-export const environments: Record<string, any> = {
+// @typescript-eslint/no-explicit-any
+export const environments: Record<string, unknown> = {
   RISLOO_CENTER_URI: `/data/Risloo-Center-Sample.json`,
   SITE_NAME: 'ریسلو',
   SITE_TITLE: 'مراکز خدمات روان‌شناسی - ریسلو',

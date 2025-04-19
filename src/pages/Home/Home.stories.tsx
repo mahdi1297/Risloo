@@ -1,6 +1,5 @@
 import { CounselingCenter } from '@/types/CounselingCenter'
 import type { Meta, StoryObj } from '@storybook/react'
-import { fn } from '@storybook/test'
 
 import HomvePage from './Home'
 import HomePage from './Home'

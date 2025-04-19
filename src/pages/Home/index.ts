@@ -1,1 +1,1 @@
-export * from './HomveView'
+export { default } from './Home'
