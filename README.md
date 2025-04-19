@@ -4,6 +4,9 @@ Project is developed using Next.js version 15.3.0 and Typescript version 5
 
 ## How to start
 
+first create a .env.local file and add this item inside
+`NEXT_PUBLIC_BASE_URL=http://localhost:3000`
+
 Development server: run "npm run dev"
 Production build: run "npm run build"
 To watch storybook: run "npm run storybook"

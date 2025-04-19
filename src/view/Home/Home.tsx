@@ -17,7 +17,7 @@ import { HomePageProps } from './Home.types'
 
 const WINDOW_BREAKPOINT = 805
 
-const HomePage: FC<HomePageProps> = ({ data }) => {
+const HomeView: FC<HomePageProps> = ({ data }) => {
   const deviceType = useDeviceType(WINDOW_BREAKPOINT)
 
   const [centers, setCenters] = useState<CounselingCenter[]>(data)
@@ -108,4 +108,4 @@ const HomePage: FC<HomePageProps> = ({ data }) => {
   )
 }
 
-export default HomePage
+export default HomeView

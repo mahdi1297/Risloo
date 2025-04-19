@@ -1,13 +1,12 @@
 import { fetchCenters } from '@/services/fetchCenters'
 import { CounselingCenter } from '@/types/CounselingCenter'
 
-import HomePage from '@/pages/Home'
-
 import { limitData } from '@/utils/limitData'
 
 import { environments } from '@/constants/enviroments'
 
 import styles from './page.module.css'
+import HomeView from '@/view/Home/Home'
 
 export const metadata = {
   title: environments.SITE_TITLE,
@@ -48,7 +47,7 @@ export default async function Home() {
 
   return (
     <div className={styles.page}>
-      <HomePage data={data} />
+      <HomeView data={data} />
     </div>
   )
 }

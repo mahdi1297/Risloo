@@ -1,8 +1,7 @@
 import { CounselingCenter } from '@/types/CounselingCenter'
 import type { Meta, StoryObj } from '@storybook/react'
 
-import HomvePage from './Home'
-import HomePage from './Home'
+import HomeView from './Home'
 import './Home.module.css'
 
 const generateMockCenters = (count: number): CounselingCenter[] => {
@@ -115,9 +114,9 @@ const generateMockCenters = (count: number): CounselingCenter[] => {
   }))
 }
 
-const meta: Meta<typeof HomePage> = {
+const meta: Meta<typeof HomeView> = {
   title: 'Pages/HomePage',
-  component: HomePage,
+  component: HomeView,
   tags: ['autodocs'],
   argTypes: {
     data: {
@@ -142,7 +141,7 @@ const mockFetchMoreCenters = async (page: number) => {
   return generateMockCenters(5)
 }
 
-type Story = StoryObj<typeof HomePage>
+type Story = StoryObj<typeof HomeView>
 
 const baseArgs = {
   data: generateMockCenters(10),

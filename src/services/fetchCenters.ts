@@ -1,4 +1,3 @@
-import { FetchResult } from '@/types/FetchResult'
 
 import { logError } from '@/utils/serverLogger'
 
@@ -8,7 +7,7 @@ import { ERROR_FA_FAILED_TO_GET_CENTER, ERROR_FA_FAILED_TO_GET_DATA } from '@/co
 
 const URL = environments.RISLOO_CENTER_URI
 
-export async function fetchCenters(): Promise<FetchResult> {
+export async function fetchCenters() {
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}${URL}`, {
       ...configs.SSR_REQUEST_CONFIG,
