@@ -1,12 +1,13 @@
+import { fetchCenters } from '@/services/fetchCenters'
+import { CounselingCenter } from '@/types/CounselingCenter'
 
+import HomePage from '@/pages/Home'
+
+import { limitData } from '@/utils/limitData'
 
 import { environments } from '@/constants/enviroments'
 
 import styles from './page.module.css'
-import { CounselingCenter } from '@/types/CounselingCenter'
-import { limitData } from '@/utils/limitData'
-import { fetchCenters } from '@/services/fetchCenters'
-import HomePage  from '@/pages/Home'
 
 export const metadata = {
   title: environments.SITE_TITLE,
@@ -28,7 +29,7 @@ export const metadata = {
 }
 
 export async function getAndManipulateCenters() {
-  const response = await fetchCenters();
+  const response = await fetchCenters()
 
   if (response.error) {
     return { data: null, error: response.error }

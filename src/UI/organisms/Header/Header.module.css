@@ -1,11 +1,10 @@
 .header {
-    width: 100%;
-    height: 90px;
-    background-color: #fff;
-    border-bottom: 4px solid var(--success);
-    box-shadow:
-        var(--infinit-list-item-offset-shadow, 0 0 #0000),
-        var(--infinit-list-item-ring-shadow, 0 0 #0000),
-        var(--infinit-list-item-shadow);
-    padding-top: 12px;
+  width: 100%;
+  height: 90px;
+  background-color: #fff;
+  border-bottom: 4px solid var(--success);
+  box-shadow:
+    var(--infinit-list-item-offset-shadow, 0 0 #0000),
+    var(--infinit-list-item-ring-shadow, 0 0 #0000), var(--infinit-list-item-shadow);
+  padding-top: 12px;
 }

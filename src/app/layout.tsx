@@ -1,11 +1,13 @@
-import { environments } from '@/constants/enviroments'
+import { HomeTemplate } from '@/UI/templates/HomeTemplate'
 import '@/styles/globals.css'
 import '@/styles/grid.css'
-import { HomeTemplate } from '@/UI/templates/HomeTemplate'
+
+import { ReactNode } from 'react'
 
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
-import { ReactNode } from 'react'
+
+import { environments } from '@/constants/enviroments'
 
 const vazir = localFont({
   src: [
@@ -37,9 +39,7 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl" className={`${vazir.variable}`}>
       <body>
-        <HomeTemplate>
-          {children}
-        </HomeTemplate>
+        <HomeTemplate>{children}</HomeTemplate>
       </body>
     </html>
   )

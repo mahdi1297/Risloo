@@ -1,9 +1,9 @@
-
 # Risloo Project
 
 Project is developed using Next.js version 15.3.0 and Typescript version 5
 
 ## How to start
+
 Development server: run "npm run dev"
 Production build: run "npm run build"
 To watch storybook: run "npm run storybook"
@@ -11,6 +11,7 @@ To lint: run "npm run lint"
 To run prettier: run "npm run format"
 
 ## Some notes
+
 There were much more to do for this sample project
 for example: I could use ISR method to generate a page for every single center but because of time i did not.
 

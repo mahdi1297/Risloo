@@ -1,6 +1,8 @@
 import React, { FC } from 'react'
-import { HomeTemplateProps } from './HomeTemplate.types'
+
 import { Header } from '@/UI/organisms/Header'
+
+import { HomeTemplateProps } from './HomeTemplate.types'
 
 export const HomeTemplate: FC<HomeTemplateProps> = ({ children }) => {
   return (
@@ -8,9 +10,7 @@ export const HomeTemplate: FC<HomeTemplateProps> = ({ children }) => {
       <header>
         <Header />
       </header>
-      <main>
-        {children}
-      </main>
+      <main>{children}</main>
       <footer></footer>
     </>
   )
