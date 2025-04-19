@@ -7,18 +7,22 @@ Project is developed using Next.js version 15.3.0 and Typescript version 5
 first create a .env.local file and add this item inside
 `NEXT_PUBLIC_BASE_URL=http://localhost:3000`
 
-
 install husky:
 `npm install --save-dev husky`
+
 `npm run prepare`
 
-then 
+then
 `npm install`
 
 Development server: run "npm run dev"
+
 Production build: run "npm run build"
+
 To watch storybook: run "npm run storybook"
+
 To lint: run "npm run lint"
+
 To run prettier: run "npm run format"
 
 ## Some notes
