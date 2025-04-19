@@ -139,99 +139,28 @@ const meta: Meta<typeof HomePage> = {
 
 export default meta;
 
-type Story = StoryObj<typeof HomePage>;
 
 const mockFetchMoreCenters = async (page: number) => {
   await new Promise(resolve => setTimeout(resolve, 1000));
   return generateMockCenters(5);
 };
 
-const mockUseDeviceType = (breakpoint: number) => 'IS_DESKTOP';
+type Story = StoryObj<typeof HomePage>;
 
-jest.mock('@/services/fetchMoreCenters', () => ({
-  fetchMoreCenters: jest.fn((page) => mockFetchMoreCenters(page)),
-}));
-
-jest.mock('@/hooks/useDeviceType', () => ({
-  useDeviceType: jest.fn((breakpoint) => mockUseDeviceType(breakpoint)),
-  deviceTypes: {
-    IS_MOBILE: 'IS_MOBILE',
-    IS_DESKTOP: 'IS_DESKTOP',
-  },
-}));
-
-// Base args
 const baseArgs = {
   data: generateMockCenters(10),
-};
-
-export const DesktopView: Story = {
-  args: baseArgs,
-  parameters: {
-    viewport: {
-      defaultViewport: 'desktop',
-    },
-  },
-  decorators: [
-    (Story) => {
-      // Override mock for this story
-      jest.mocked(mockUseDeviceType).mockReturnValue(deviceTypes.IS_DESKTOP);
-      return <Story />;
-    },
-  ],
-};
-
-export const MobileView: Story = {
-  args: baseArgs,
-  parameters: {
-    viewport: {
-      defaultViewport: 'mobile1',
-    },
-  },
-  decorators: [
-    (Story) => {
-      jest.mocked(mockUseDeviceType).mockReturnValue(deviceTypes.IS_MOBILE);
-      return <Story />;
-    },
-  ],
-};
-
-export const LoadingMore: Story = {
-  args: baseArgs,
-  decorators: [
-    (Story) => {
-      jest.mocked(mockFetchMoreCenters).mockImplementation(async () => {
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        return generateMockCenters(5);
-      });
-      return <Story />;
-    },
-  ],
-};
-
-export const NoMoreResults: Story = {
-  args: {
-    data: generateMockCenters(5),
-  },
-  decorators: [
-    (Story) => {
-      jest.mocked(mockFetchMoreCenters).mockResolvedValue([]);
-      return <Story />;
-    },
-  ],
 };
 
 export const WithSelectedItem: Story = {
   args: baseArgs,
   decorators: [
-    (Story) => {
-      // Mock initial selection by simulating a click
-      const selectedItem = baseArgs.data[0];
+    (StoryFn) => {
       setTimeout(() => {
+        const selectedItem = baseArgs.data[0];
         const element = document.querySelector(`[data-id="${selectedItem.id}"]`);
         element?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
       }, 500);
-      return <Story />;
+      return <StoryFn />;
     },
   ],
 };
